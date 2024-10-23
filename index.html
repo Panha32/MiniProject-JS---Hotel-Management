@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Hotel Management System</h1>
+        <br>
+        <div class="form">
+            <div id="createHotel" class="row">
+                <div class="col-12">
+                    <label for="row">Enter number of floor &nbsp;&nbsp;</label>
+                    <input class="form-control" type="number" id="row">
+                </div>
+                <div class="col-12">
+                    <label for="col">Enter number of room &nbsp;</label>
+                    <input class="form-control" type="number" id="col">
+                </div>
+                <button type="button" onclick="create()">Create Hotel</button>
+            </div>
+        
+            <div id="hotel" style="display: none">
+                <h1 style="text-align: center;">Welcome to my Universe</h1>
+                <h3 id="feature" style="text-align: center; padding: 10px 0;"></h3>
+                <div class="wrapper-button">
+                    <button type="button" onclick="checkIn()" style="background-color: rgb(3, 210, 3);">Check In</button>
+                    <button type="button" onclick="checkOut()" style="background-color: red;">Check Out</button>
+                </div>  
+                <div id="floor" class="floor"></div>
+                <div style="display: none" id="checkIn">
+                    <h2 style="margin-bottom: 20px;">Check-In</h2>
+                    <div class="col-12">
+                        <label for="floorNum">Enter floor number &nbsp;&nbsp;</label>
+                        <input class="form-control" type="number" id="floorNum">
+                    </div>
+                    <div class="col-12">
+                        <label for="roomNum">Enter room number &nbsp;</label>
+                        <input class="form-control" type="number" id="roomNum">
+                    </div>
+                    <div class="col-12">
+                        <label for="name" style="padding-right: 63px;">Enter name </label>
+                        <input class="form-control" type="text" id="name" required>
+                    </div>
+                    <button type="button" onclick="saveIn()" style="margin-left: 298px;">Save</button>
+                </div>
+
+                <div style="display: none" id="checkOut">
+                    <h2 style="margin-bottom: 20px;">Check-Out</h2>
+                    <div class="col-12">
+                        <label for="floorNumOut">Enter floor number &nbsp;&nbsp;</label>
+                        <input class="form-control" type="number" id="floorNumOut">
+                    </div>
+                    <div class="col-12">
+                        <label for="roomNumOut">Enter room number &nbsp;</label>
+                        <input class="form-control" type="number" id="roomNumOut">
+                    </div>
+                    <button type="button" onclick="saveOut()" style="margin-left: 298px;">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
